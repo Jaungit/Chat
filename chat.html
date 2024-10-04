@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Anônimo</title>
+</head>
+<body>
+    <h1>Chat Anônimo</h1>
+    <form method="POST" action="/send">
+        Nome: <input type="text" name="username" required><br>
+        Mensagem: <textarea name="message" required></textarea><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <h2>Mensagens</h2>
+    <ul>
+        {% for msg in messages %}
+            <li>{{ msg }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
