@@ -7,7 +7,7 @@ messages = []
 
 @app.route('/')
 def index():
-    return render_template('chat.html', messages=messages)
+    return render_template('index.html', messages=messages)
 
 @app.route('/send', methods=['POST'])
 def send_message():
